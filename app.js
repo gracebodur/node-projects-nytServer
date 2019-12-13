@@ -1,8 +1,10 @@
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
 
 const app = express()
 
+app.use(cors())
 app.use(morgan('common')) //common format?
     const books = require('./books-data.js') //require the array of books
 
